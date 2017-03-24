@@ -1,82 +1,9 @@
 /*
 * @Author: rhys
 * @Date:   2017-03-24 13:21:23
-* @Last Modified by:   rhys
-* @Last Modified time: 2017-03-24 14:48:04
+* @Last Modified by:   rhyspang
+* @Last Modified time: 2017-03-24 15:27:37
 */
 
-$toolbar-width: 52px;
-
- 
-.toolbar {
-	position:fixed;
-	left: 50%;
-	bottom: 5px;
-	margin-left: -$toolbar-width / 2;
-}
-.toolbar-item {
-	position: relative;
-	display: block;
-	width: $toolbar-width;
-	height: $toolbar-width;
-	background-image: url(../img/toolbar.png);
-	background-repeat: no-repeat;
-	margin-top: 1px; 
-	transition: background-position 1s;
-
-	&:hover {
-		.toolbar-layer {
-			opacity: 1;
-			filter: alpha(opacity=100);
-			transform: scale(1);
-		}
-	}
-
-}
-.toolbar-item-weixin {
-	background-position: 0 -798px;
-	&:hover {
-		background-position: 0 -860px;
-	}
-	
-	.toolbar-layer {
-		height: 212px;
-		background-position: 0 0;
-	}
-}
-.toolbar-item-feedback {
-	background-position: 0 -426px;
-	&:hover {
-		background-position: 0 -488px;
-	}
-}
-.toolbar-item-app {
-	background-position: 0 -550px;
-	&:hover {
-		background-position: 0 -612px;
-	}
-
-	.toolbar-layer {
-		height: 194px;
-		background-position: 0 -212px;
-	}
-}
-.toolbar-item-top {
-	background-position: 0 -674px;
-	&:hover {
-		background-position: 0 -736px;
-	}
-}
-.toolbar-layer {
-	position: absolute;
-	right: $toolbar-width - 6;
-	bottom: -10px;
-	width: 172px;
-	background-image: url("../img/toolbar.png");
-	background-repeat: no-repeat;
-	opacity: 0;
-	filter: alpha(opacity=0);
-	transform: scale(0.01);
-	transition: all 1s;
-	transform-origin: 95% 95%;
-}
+@import "mixin";
+@import "toolbar";
